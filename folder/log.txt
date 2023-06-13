@@ -1,0 +1,67 @@
+2022-10-10 11:07:05 
+The program has begun traversing the specified directory...The directory is: D:\folder
+2022-10-10 11:07:06 
+Found a group of redundant files:
+File Path & Name: D:\folder\test1.txt
+File Type: txt
+File Size: 110 B
+File MD5: 5294ca75b590dce47f9d35c613f51adb
+File Owner: Xavicii
+Creation Time: 2022-10-09 13:05:08
+Last Access Time: 2022-10-10 09:53:21
+Last Modification Time: 2022-10-10 09:53:21
+
+File Path & Name: D:\folder\test2.txt
+File Type: txt
+File Size: 9 B
+File MD5: 5294ca75b590dce47f9d35c613f51adb
+File Owner: Xavicii
+Creation Time: 2022-10-10 10:57:19
+Last Access Time: 2022-10-10 10:57:19
+Last Modification Time: 2022-10-10 09:53:21
+
+
+2022-10-10 11:07:06 
+Found a group of redundant files:
+File Path & Name: D:\folder\folder_test1\test3.c
+File Type: c
+File Size: 110 B
+File MD5: 3e00806b183d50c5b56429ad7ba2118c
+File Owner: Xavicii
+Creation Time: 2022-10-10 09:51:54
+Last Access Time: 2022-10-10 09:51:54
+Last Modification Time: 2022-10-09 21:48:49
+
+File Path & Name: D:\folder\folder_test1\test4.c
+File Type: c
+File Size: 9 B
+File MD5: 3e00806b183d50c5b56429ad7ba2118c
+File Owner: Xavicii
+Creation Time: 2022-10-10 10:57:04
+Last Access Time: 2022-10-10 10:57:04
+Last Modification Time: 2022-10-09 21:48:49
+
+
+2022-10-10 11:11:22 
+The program has begun traversing the specified directory...The directory is: D:\folder_test2
+2022-10-10 11:11:23 
+Found a group of redundant files:
+File Path & Name: D:\folder_test2\test5.docx
+File Type: docx
+File Size: 12673 B
+File MD5: 7eac423ffe8b9326218b0792f3b5cfd8
+File Owner: Xavicii
+Creation Time: 2022-10-10 11:03:01
+Last Access Time: 2022-10-10 11:03:01
+Last Modification Time: 2022-10-10 11:02:52
+
+File Path & Name: D:\folder_test2\test6.docx
+File Type: docx
+File Size: 12673 B
+File MD5: 7eac423ffe8b9326218b0792f3b5cfd8
+File Owner: Xavicii
+Creation Time: 2022-10-10 11:05:58
+Last Access Time: 2022-10-10 11:05:58
+Last Modification Time: 2022-10-10 11:02:52
+
+
