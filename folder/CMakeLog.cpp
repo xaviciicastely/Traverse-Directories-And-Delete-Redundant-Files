@@ -27,22 +27,22 @@ void CMakeLog::GetFileCAWTime(string filepath, string &CreateTime, string &LastA
 	HANDLE hfile;
 	FILETIME ftCreate, ftAccess, ftWrite;
 	SYSTEMTIME stUTC, stLocal;
-    char temp[200];
-    memset(temp,'\0',sizeof temp);
-    
-	 
-    /*把filepath中的单斜杠转成双斜杠以生成句柄hfile
+	char temp[200];
+	memset(temp,'\0',sizeof temp);
+
+
+	/*把filepath中的单斜杠转成双斜杠以生成句柄hfile
 	string::size_type pos = 0;
-    while((pos = filepath.find('\\',pos)) != string::npos)
-    {
-    	filepath.insert(pos,"\\");
-    	pos = pos + 2;
-    }
-    cout<< filepath<<endl;*/
+	while((pos = filepath.find('\\',pos)) != string::npos)
+	{
+	filepath.insert(pos,"\\");
+	pos = pos + 2;
+	}
+	cout<< filepath<<endl;*/
     
-    // 获取文件句柄 
+    	// 获取文件句柄 
 	hfile = CreateFileA(filepath.c_str(), 0, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-	
+
 	// 判断句柄是否获取成功
 	if(hfile == INVALID_HANDLE_VALUE)
 	{
@@ -57,12 +57,12 @@ void CMakeLog::GetFileCAWTime(string filepath, string &CreateTime, string &LastA
 	SystemTimeToTzSpecificLocalTime(NULL, &stUTC, &stLocal);// 将文件创建时间转化为系统时间
 	sprintf(temp, "%04d-%02d-%02d %02d:%02d:%02d",stLocal.wYear, stLocal.wMonth, stLocal.wDay, stLocal.wHour, stLocal.wMinute, stLocal.wSecond);
 	CreateTime = temp;
-	
+
 	FileTimeToSystemTime(&ftAccess, &stUTC);  
 	SystemTimeToTzSpecificLocalTime(NULL, &stUTC, &stLocal); // 将文件最近访问时间转化为系统时间
 	sprintf(temp, "%04d-%02d-%02d %02d:%02d:%02d", stLocal.wYear, stLocal.wMonth, stLocal.wDay, stLocal.wHour, stLocal.wMinute, stLocal.wSecond);
 	LastAccessTime = temp;
-	
+
 	FileTimeToSystemTime(&ftWrite, &stUTC);  
 	SystemTimeToTzSpecificLocalTime(NULL, &stUTC, &stLocal);// 将文件最近修改时间转化为系统时间
 	sprintf(temp, "%04d-%02d-%02d %02d:%02d:%02d", stLocal.wYear, stLocal.wMonth, stLocal.wDay, stLocal.wHour, stLocal.wMinute, stLocal.wSecond);
@@ -124,7 +124,7 @@ string CMakeLog::GetFileOwner(string filepath)
 	PSECURITY_DESCRIPTOR pSD = NULL;
 
 	// 获取文件句柄 
-	hFile = CreateFile((LPCWSTR)filepath.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	hFile = CreateFile((LPWSTR)filepath.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	
 	// 判断句柄是否获取成功 
 	if (hFile == INVALID_HANDLE_VALUE) {
